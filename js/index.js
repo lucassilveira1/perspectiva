@@ -61,4 +61,65 @@ document.addEventListener('DOMContentLoaded', function () {
     prevButton.addEventListener('click', moveToPrevSlide);
     
     setInterval(moveToNextSlide, 3000);
+
+    // MODAL
+    const modal = document.getElementById("videoModal");
+    const modalVideo = document.getElementById("modalVideo");
+    const closeModal = document.getElementsByClassName("close")[0];
+    const thumbnails = document.getElementsByClassName("thumbnail");
+
+    for (let thumbnail of thumbnails) {
+        thumbnail.addEventListener("click", function () {
+            const videoSrc = thumbnail.getAttribute("data-video");
+            modalVideo.src = videoSrc;
+            modal.style.display = "block";
+        });
+    }
+
+    closeModal.onclick = function () {
+        modal.style.display = "none";
+        modalVideo.src = "";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            modalVideo.src = "";
+        }
+    }
+
+    const faqQuestions = document.querySelectorAll(".faq-question");
+
+    faqQuestions.forEach(function(question) {
+        question.addEventListener("click", function() {
+            const answer = this.nextElementSibling;
+            answer.classList.toggle("show-answer");
+            const arrow = this.querySelector(".arrow");
+            arrow.classList.toggle("rotated");
+            const answerParagraph = answer.querySelectorAll(".faq-answer");
+            card.classList.toggle("active"); 
+            
+            answerParagraph.classList.toggle("black-text", card.classList.contains("active"));
+            arrow.style.transition = "transform 0.3s ease";
+            
+            if (arrow.classList.contains("rotated")) {
+                arrow.style.transform = "rotate(180deg)";
+            } else {
+                arrow.style.transform = "rotate(0deg)";
+            }
+
+        });
+    });
+
+    document.getElementById('scrollButton').addEventListener('click', function() {
+        document.getElementById('pay-section').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('scrollar').addEventListener('click', function() {
+        document.getElementById('pay-section').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });

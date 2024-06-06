@@ -20,20 +20,20 @@
     <header>
         <div class="header-content">
             <img src="../assets/logo.png" alt="Logo" class="header_img">
-            <h1>Você é tão Capaz de Virar Bombeiro Militar Quantos os <br> <span>60 Alunos</span> que Nós Aprovamos no
+            <h1>Você é tão capaz quantos os <br> <span>60 Alunos</span> que aprovamos no
                 CFO CBMERJ 2023</h1>
         </div>
     </header>
     <section class="video-section">
         <div class="video">
             <div class="video-content">
-                <img src="video-thumbnail.jpg" alt="Video Thumbnail" class="video-thumbnail">
+                <img src="./assets/cbmerj.png" alt="Video Thumbnail" class="video-thumbnail">
                 <a href="#" class="play-button"></a>
             </div>
         </div>
     </section>
     <section class="cta-section">
-        <button id="button">Quero ser o próximo</button>
+        <button class="button" id="scrollButton">Quero ser o próximo</button>
     </section>
     <section class="students-list">
         <div class="carousel-wrapper">
@@ -74,7 +74,7 @@
             </h2>
         </div>
 
-        <button id="button">
+        <button class="button" id="scrollar">
             Quero ser o próximo
         </button>
     </section>
@@ -83,7 +83,7 @@
         <div class="ctner">
             <h2>
                 <p>
-                    Realize seu sonho de ser Bombeiro Militar no CBMERJ e <br> desfrute de uma vida financeira
+                    Realize seu sonho de ser Bombeiro Militar no <br> CBMERJ e desfrute de uma vida financeira
                     <span>incrível</span>!
                 </p>
             </h2>
@@ -111,26 +111,26 @@
     </section>
 
     <section class="ementa">
-        <h2>Veja Tudo que Você Terá Acesso Sendo Nosso Aluno</h2>
-        <ul>
-            <li>247 apostilas com toda a teoria e 15.478 questões;</li>
-            <li>15.478 questões nas apostilas;</li>
-            <li>5.048 questões resolvidas e comentadas em vídeo;</li>
-            <li>1.823 vídeos de teoria;</li>
-            <li>Método CRC;</li>
-            <li>16 simulados;</li>
-            <li>Plataforma similar à Netflix;</li>
-            <li>Plataforma exclusiva para suporte e dúvidas;</li>
-            <li>Sugestão de plano de estudos - Planner para personalizar;</li>
-            <li>Gabarito interativo dos simulados;</li>
+        <h1>Aproveite todos os benefícios de ser nosso Aluno</h1>
+        <ul class="ementa-lista">
+            <li id="ementa-lista">247 apostilas com toda a teoria e 15.478 questões;</li>
+            <li id="ementa-lista">15.478 questões nas apostilas;</li>
+            <li id="ementa-lista">5.048 questões resolvidas e comentadas em vídeo;</li>
+            <li id="ementa-lista">1.823 vídeos de teoria;</li>
+            <li id="ementa-lista">Método CRC;</li>
+            <li id="ementa-lista">16 simulados;</li>
+            <li id="ementa-lista">Plataforma similar à Netflix;</li>
+            <li id="ementa-lista">Plataforma exclusiva para suporte e dúvidas;</li>
+            <li id="ementa-lista">Sugestão de plano de estudos - Planner para personalizar;</li>
+            <li id="ementa-lista">Gabarito interativo dos simulados;</li>
         </ul>
     </section>
 
     <section class="album-container">
         <div class="text-container">
-            <p>A Gente Ainda não Sabe como vai Fazer para Colocar mais <span class="bold">60 Alunos
-                    Aprovados</span> no Nosso Álbum de Fotos
-            </p>
+            <h2>A Gente Ainda não Sabe como vai Fazer para colocar mais <br>
+            <span>60 alunos</span> Aprovados no nosso álbum de fotos</h2>
+            
         </div>
 
         <div class="album-img-container">
@@ -139,10 +139,21 @@
     </section>
 
     <section class="ytb">
-        <span>Veja um Pouco do que os alunos acham de Estudar no <span>Perspectiva</span></span>
-
-
+        <span>Veja um Pouco do que os alunos acham de Estudar no <span class="highlight">Perspectiva</span></span>
+        <div class="video-thumbnails">
+            <img src="./assets/videos/1.png" alt="Vídeo 1" class="thumbnail" data-video="https://www.youtube.com/embed/1MyGSjBStOw">
+            <img src="./assets/videos/2.png" alt="Vídeo 2" class="thumbnail" data-video="https://www.youtube.com/embed/tm7TIRXauy8">
+            <img src="./assets/videos/3.png" alt="Vídeo 3" class="thumbnail" data-video="https://www.youtube.com/embed/Xcrl-4nr_aI">
+            <img src="./assets/videos/4.png" alt="Vídeo 4" class="thumbnail" data-video="https://www.youtube.com/embed/EOJbEkoF3BM">
+        </div>
     </section>
+    
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="modalVideo" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <section class="garantia">
         <h1>Sua Garantia é <span>Total</span></h1>
@@ -153,12 +164,87 @@
     </section>
 
     <div class="space"></div>
-
-    <section class="ingressar">
+    
+    <div class="text-chamativo">
         <h1>Você vai Estar na Próxima Lista de Aprovados!</h1>
         <span>Basta dar o primeiro passo e desbloquear seu acesso na nossa turma agora mesmo</span>
+    </div>
+
+    <section class="ingressar" id="pay-section">
+       
+    <div class="ingressar-text">
+        <img src="./assets/logo.png" alt="Logo Perspectiva">
+        <h2>Curso Completo CFO <br> CBMERJ Turma 2024</h2>
+    </div>
+        <div class="ingressar-container">
+            <div class="card">
+                <div class="ingressar-lista">
+                    <p id="lista">✔ 197 apostilas;</p>
+                    <p id="lista">✔ 3.147 questões em vídeo;</p>
+                    <p id="lista">✔ 10.115 questões nas apostilas;</p>
+                    <p id="lista">✔ 1.138 vídeos de teoria;</p>
+                    <p id="lista">✔ 10 simulados;</p>
+                    <p id="lista">✔ Método CRC;</p>
+                    <p id="lista">✔ Plataforma estilo Netfpx;</p>
+                    <p id="lista">✔ Sugestão de plano de estudo;</p>
+                    <p id="lista">✔ Região para tirar dúvidas;</p>
+                    <p id="lista">✔ Aulas AO VIVO (pacote opcional).</p>
+                </div>
+                <div class="price">
+                    <p>12x de <span class="price-value">R$ 82,29</span>
+                        <p id="second-paragraph">ou à vista R$ 797,90</p>
+                    </p>
+                    <a 
+                    href="https://checkout.cfo.cursoperspectivaonline.com.br/pay/cfo-cbmerj-2024?src=9b3b74fe7ec54def98d5e7f8a7d7af37-9b3b74fe7ec54def98d5e7f8a7d7af37&" 
+                    class="ingressar-button" id="scrollButton">Vou Mudar de Vida</a>
+                </div>
+                </div>
+            <p id="curso-access">Acesso por 1 ano</p>
+        </div>
     </section>
 
+    <section class="faq">
+        
+        <div class="faq-title">
+            <h1>Ainda tem alguma dúvida?</h1>
+            <h2>(Perguntas Frequentes)</h2>
+        </div>
+
+       <div class="faq-container">
+
+        <div class="faq-list">
+            <div class="faq-card">
+                <span class="faq-question">01. Quanto tempo eu tenho acesso? <img src="./assets/setinha.svg" class="arrow" alt=""></span>
+                <p class="faq-answer">Seu acesso é de 1 ano.</p>
+            </div>
+            <div class="faq-card">
+                <span class="faq-question">02. Se eu precisar estudar para mais um concurso,terei alguma condição para renovar? <img src="./assets/setinha.svg" class="arrow" alt=""></span>
+                <p class="faq-answer">Com certeza! No ato da renovação, todo ex-aluno do Perspectiva recebe um link especial vinculado ao seu CPF de cadastro aqui com a gente. Esse link é de, pelo menos, 40% OFF do valor do curso. Ou seja, o preço da turma sai, no mínimo, com 40% de desconto.</p>
+            </div>
+            <div class="faq-card">
+                <span class="faq-question">03. Na plataforma, tem toda a teoria que cai na prova? <img src="./assets/setinha.svg" class="arrow" alt=""></span>
+                <p class="faq-answer">Sim! Nós montamos nosso conteúdo de acordo com o edital.</p>
+            </div>
+            <div class="faq-card">
+                <span class="faq-question">04. Haverá Simulados? <img src="./assets/setinha.svg" class="arrow" alt=""></span>
+                <p class="faq-answer">Sim! São no mínimo 12 simulados no ano. 100% exclusivos de acordo com todo o conteúdo programático do edital. O calendário está disponível dentro da nossa plataforma.</p>
+            </div>
+            <div class="faq-card">
+                <span class="faq-question">05. Como funcionam as correções dos simulados? <img src="./assets/setinha.svg" class="arrow" alt=""></span>
+                <p class="faq-answer">Nossos simulados vêm acompanhados de um gabarito interativo, ou seja, você o preenche on-line e, após enviar suas respostas, o sistema te indica sua nota instantaneamente. As questões erradas trazem indicações de vídeos com resolução comentada. Assim, você pode descobrir o que precisa ser melhorado e aprende, efetivamente, com seus erros.</p>
+            </div>
+            <div class="faq-card">
+                <span class="faq-question">06. Terei um planejamento de estudo? <img src="./assets/setinha.svg" class="arrow" alt=""></span>
+                <p class="faq-answer">Sim! Nós deixamos um planejamento base na plataforma para que você use em seu dia a dia. Porém, é muito possível que ajustes tenham de ser feitos para que o planejamento esteja adaptado à sua realidade. Seguindo a estrutura do modelo, você terá uma carga de estudos bem desenvolvida, com toda certeza. Ah! Lembre-se sempre: você também pode nos pedir ajuda sempre que quiser!</p>
+            </div>
+        </div>
+        
+       </div>
+    </section>
+
+    <footer>
+        <img src="./assets/logo.png" alt="">
+    </footer>
     <script src="./js/index.js"></script>
 </body>
 
