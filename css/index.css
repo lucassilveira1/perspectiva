@@ -179,6 +179,10 @@ header h1 span {
     max-width: 100%;
 }
 
+.ementa {
+    margin-bottom: 25px;
+}
+
 .ementa h1 {
     text-align: center;
     color: #333;
@@ -195,13 +199,16 @@ header h1 span {
 }
 
 #ementa-lista {
+    display: inline-block;
     text-align: start;
+    align-items: center;
     background-color: rgb(56, 173, 166);
-    border: 1px solid #ddd;
     border-radius: 15px;
     margin-bottom: 10px;
     padding: 15px;
     font-size: 18px;
+    width: 400px;
+    max-width: 100%;
 }
 
 
