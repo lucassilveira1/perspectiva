@@ -25,7 +25,7 @@ header {
 }
 
 .header_img {
-    background-image: url(../assets/logo.png);
+    /* background-image: url(../assets/logo.png); */
     margin-bottom: 20px;
 }
 
@@ -168,7 +168,6 @@ header h1 span {
     font-size: 30px;
 }
 
-
 .salary-ctn {
     text-align: center;
 }
@@ -210,7 +209,6 @@ header h1 span {
     width: 400px;
     max-width: 100%;
 }
-
 
 /* devices */
 .platform-section {
@@ -321,7 +319,6 @@ header h1 span {
     padding: 10px 30px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     color: #ffffff;
-
 }
 
 #button:hover {
@@ -402,7 +399,6 @@ header h1 span {
     cursor: pointer;
 }
 
-
 /* album */
 
 .album-container .text-container {
@@ -446,7 +442,6 @@ header h1 span {
     border-radius: 5px;
 }
 
-
 .garantia {
     color: #ffffff;
     width: 100%;
@@ -455,7 +450,6 @@ header h1 span {
     font-size: 30px;
     max-width: 100%;
 }
-
 
 .garantia h1 {
     font-weight: bold;
@@ -483,7 +477,7 @@ header h1 span {
     margin-top: 5%;
     border-radius: 5px;
     margin-bottom: 5%;
-    filter: hue-rotate(0deg) saturate(1) brightness(1) contrast(1) invert(0) sepia(0) blur(0px) grayscale(0) drop-shadow(rgb(107,107,107) 0px 0px 58px)
+    filter: hue-rotate(0deg) saturate(1) brightness(1) contrast(1) invert(0) sepia(0) blur(0px) grayscale(0) drop-shadow(rgb(107,107,107) 0px 0px 58px);
 }
 
 .card {
@@ -497,7 +491,6 @@ header h1 span {
     margin-top: 15%;
     border-radius: 5px;
     color: #38ADA6;
-    
 }
 
 .ingressar-text {
@@ -531,7 +524,6 @@ header h1 span {
 .ingressar-lista {
     text-align: start;
     font-size: 0.9rem;
-    
 }
 
 #lista {
@@ -553,7 +545,6 @@ p#lista {
     background-color: #38ADA6;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
 }
 
 .price p {
@@ -579,6 +570,7 @@ p#lista {
     padding: 10px 20px;
     color: #38ADA6;
 }
+
 .ingressar-button {
     background-color: #ff5722;
     color: white;
@@ -598,6 +590,7 @@ p#lista {
     background-color: #e64a19;
 }
 
+/* FAQ Section */
 .faq {
     background-color: #F2F2F2;
 }
@@ -620,7 +613,8 @@ p#lista {
     padding: 4px;
 }
 
-.faq-card span, p {
+.faq-card span,
+.faq-card p {
     text-align: start;
 }
 
@@ -639,7 +633,6 @@ p#lista {
     transition: .5s;
 }
 
-
 .faq-answer {
     display: none;
     margin: 5px;
@@ -647,7 +640,7 @@ p#lista {
 }
 
 .show-answer {
-    display: block; 
+    display: block;
     opacity: 1;
 }
 
@@ -661,8 +654,7 @@ p#lista {
     color: black;
 }
 
-
-.faq-title h1{
+.faq-title h1 {
     color: #3C4344;
     font-size: 1.8rem;
 }
@@ -671,13 +663,14 @@ p#lista {
     color: orangered;
 }
 
-.arrow{
+.arrow {
     float: right;
 }
 
 .show-answer .arrow {
     transform: rotate(180deg);
 }
+
 .black-text {
     color: black; /* Define a cor do texto como preto */
 }
@@ -700,7 +693,8 @@ footer img {
     width: 100px;
 }
 
-/* responsividade */
+/* Responsividade */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5em;
@@ -714,7 +708,8 @@ footer img {
         padding: 0 20px;
     }
 
-    .ctner h2 p, .text-container p {
+    .ctner h2 p,
+    .text-container p {
         font-size: 1.5em;
     }
 
@@ -728,9 +723,32 @@ footer img {
     }
 }
 
-
 @media only screen and (max-width: 768px) {
     .garantia {
         font-size: 20px; /* Reduzir o tamanho da fonte para dispositivos menores */
+    }
+}
+
+/* Responsividade para dispositivos com largura máxima de 480px */
+@media only screen and (max-width: 480px) {
+    .album-container h2 {
+        font-size: 2rem; /* Reduz o tamanho do título do álbum */
+    }
+
+    .album-img-container {
+        transform: translateY(0); /* Remove a transformação do contêiner da imagem */
+    }
+
+    .photo {
+        width: 100%; /* Ajusta a largura da foto para preencher a tela */
+    }
+
+    .faq-card {
+        width: 90%; /* Ajusta a largura dos cartões de FAQ */
+    }
+
+    .faq-card span,
+    .faq-card p {
+        font-size: 1rem; /* Reduz o tamanho do texto no FAQ */
     }
 }
